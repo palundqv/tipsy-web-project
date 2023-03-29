@@ -1,0 +1,899 @@
+@import url("https://fonts.googleapis.com/css?family=Vibur:400");
+
+
+
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* ACCOUNTVIEW*/
+
+.headers {
+	text-align: center;
+	font-size: 50px;
+	font-family: "Vibur";
+	margin-top: 100px;
+	padding-bottom: 5px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.widgets {
+	width: 33%;
+	float: left;
+	padding: 5px;
+}
+
+#widgets {
+	cursor: pointer;
+	font-size: 50px;
+}
+
+.ro::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.center {
+	text-align: center;
+	margin: 50px;
+}
+
+.toptop {
+	-webkit-animation: slide-out-top 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+	animation: slide-out-top 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+@-webkit-keyframes slide-out-top {
+	0% {
+		-webkit-transform: translateY(-10%);
+		transform: translateY(-10%);
+	}
+	to {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-out-top {
+	0% {
+		-webkit-transform: translateY(-10%);
+		transform: translateY(-10%);
+	}
+	to {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+.rect {
+	border-style: solid;
+	width: 50%;
+	height: 50px;
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 20px;
+	border-radius: 10px 10px 10px 10px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+.saveButton {
+	border-radius: 10px 10px 10px 10px;
+	width: 110px;
+	height: 50px;
+	font-family: "Vibur";
+	font-size: 25px;
+	cursor: pointer;
+	display: block;
+	margin-left: 44%;
+	margin-top: 15px;
+}
+
+.change{
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Vibur';
+}
+
+.logout{
+	font-family: "Vibur";
+	font-size: 25px;
+	margin-left: 45%;
+	border-style: solid;
+	height: 45px;
+	margin-bottom: 20px;
+	border-radius: 10px 10px 10px 10px;
+	text-align: center;
+	line-height: 40px;
+}
+
+
+#logout{
+	cursor: pointer;
+	width: 10%;
+}
+
+.floatCon{
+	padding: 10px;
+}
+
+.floatChild{
+	width: 50%;
+    float: left;
+}
+
+#usersFavorites{
+	height:310px;
+}
+
+.usersFavorites{
+	cursor: pointer;
+	border-style: solid;
+	border-radius: 10px 10px 10px 10px;
+	padding: 0.5%;
+}
+
+
+.imgCrop {
+    width: 310px;
+    height: 310px;
+    object-fit: cover;
+}
+
+.textCrop {
+	width: 310px;
+}
+
+
+.line {
+	border: solid;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	margin-left: 60px;
+	margin-right: 60px;
+	padding: 7px;
+	border-radius: 10px 10px 10px 10px;
+	background-image: linear-gradient(to bottom right, rgb(158, 1, 54), white);
+}
+
+
+/* HEADER/TOP BAR */
+
+.border {
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(82, 3, 3);
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+	background-image: linear-gradient(to bottom right, rgb(158, 1, 54), rgb(28, 87, 163));
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+
+
+.header {
+	text-align: center;
+	border-bottom: solid;
+	border-color: rgb(82, 3, 3);
+	border-width: 2px;
+	padding: 30px;
+	background-image: url("js/pictures/brick.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	
+}
+
+@media only screen and (max-width: 1100px) {
+	.ins {
+	  display: none;
+	}
+  }
+
+.instructions{
+	position: absolute;
+	top: 65px;
+	right: 80px;
+	font-size: 30px;
+	color: #fff;
+	font-family: "Vibur";
+	animation: pulsate 0.11s ease-in-out infinite alternate;
+	font-weight: 400;
+	line-height: 1.1;
+	max-width: 150px;
+}
+
+
+.neonBorder{
+	border: 0.2rem solid #fff;
+	border-radius: 2rem;
+	padding: 0.3em;
+	box-shadow: 0 0 .2rem #fff,
+				0 0 .2rem #fff,
+				0 0 2rem #f09,
+				0 0 0.8rem #f09,
+				0 0 2.8rem #f09,
+				inset 0 0 1.3rem #f09;	
+}
+
+.name {
+	margin: 20px;
+	font-size: 70px;
+	color: #fff;
+	font-family: "Vibur";
+	animation: pulsate 0.11s ease-in-out infinite alternate;
+	font-weight: 400;
+	line-height: 1;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+@keyframes pulsate {
+	100% {
+		/* Larger blur radius */
+		text-shadow: 
+		0 0 4px #fff, 
+		0 0 11px #fff, 
+		0 0 19px #fff, 
+		0 0 40px #f09, 
+		0 0 80px #f09, 
+		0 0 90px #f09, 
+		0 0 100px #f09, 
+		0 0 150px #f09;
+	}
+	0% {
+		/* A slightly smaller blur radius */
+		text-shadow: 
+		0 0 4px #fff,
+		0 0 10px #fff,
+		0 0 18px #fff,
+		0 0 38px #f09,
+		0 0 73px #f09,
+		0 0 80px #f09,
+		0 0 94px #f09,
+		0 0 140px #f09;
+	}
+}
+
+
+a.topB{
+	color:white;
+	
+}
+
+a {
+	color: black;
+	font-family: sans-serif;	
+}
+
+
+a:link {
+	text-decoration: none;
+	font-size: 15px;
+}
+
+a:hover,
+a:active {
+	color: #f09;
+	text-shadow: 0.5px 0.5px 15px rgb(255, 255, 255);
+	cursor: pointer;
+}
+
+
+#search-btn{
+	border: 1px solid black;
+	border-left: 0px;
+	border-style: solid;
+
+}
+
+.search-btn {
+	cursor: pointer;
+	border-radius: 0 30px 30px 0;
+	background-color: #fff;
+	color: #000;
+	height: 26.5px;
+	position: relative;
+	z-index: 2;
+	
+}
+
+.options{
+	border-radius: 30px 0px 0px 30px;
+	height: 27px;
+	cursor: pointer;
+	border: 1px solid black;
+	border-right: 0px;
+}
+
+/* DETAILS*/
+
+.back{
+	position: absolute;
+	top: 100px;
+	right: 60px;
+	width: 45px;
+	height: 45px;
+}
+
+.remove{
+	position: absolute;
+	bottom: 50px;
+	right: 60px;
+	width: 45px;
+	height: 45px;
+}
+
+#back{
+	cursor: pointer;
+}
+
+.text{
+	text-align: center;
+	display: inline-block;
+}
+
+.drink {
+	font-family: "Vibur";
+	font-size: 40px;
+	margin-top: 60px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	
+}
+
+.flex{
+	flex-basis: 45%;
+	position: static;
+	
+}
+
+
+.drinkImg {
+	object-fit: cover;
+	float: left;
+	padding: 5px;
+	height: 500px;
+	width: 500px;
+	border-style: solid;
+	border-radius: 10px 10px 10px 10px;
+	margin: 10px;
+	background-image: linear-gradient(to bottom right, rgba(158, 1, 53, 0.637), rgba(28, 86, 163, 0.651));
+	
+}
+
+
+.rowIcons {
+	font-size: 50px;
+	float: right;
+	width: 33%;
+	padding: 5px;
+	margin: 30px;
+	
+}
+
+.col::after {
+	content: "";
+	clear: both;
+	display: table;
+	margin: 10px;
+}
+
+.ingred {
+	text-transform: uppercase;
+	margin: 10px;
+}
+
+.instruction{
+	padding-top: 2em;
+	margin-right: 100px;
+	margin-left: 10px;
+	font-style: italic;
+
+}
+
+.ingredList{
+	float:right;
+	margin-right: auto;
+	margin-left: 50px;
+}
+
+.paddingRight {
+	padding-right: 20px;
+}
+
+.paddingTop {
+	padding-top: 50px;
+}
+
+.margin{
+	margin-left: 40px;
+}
+
+.table {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.425);
+	width: 300px;
+} 
+
+
+.icon:hover { 
+	color:rgb(199, 26, 185)
+}
+
+.popup{
+	position: fixed;
+	top: 7%;
+	left: 50%;
+}
+
+.popupCustom{
+	position:fixed;
+	top: 7%;
+	left: 80%;
+	margin: 10px;
+}
+
+.popupIngred{
+	position:fixed;
+	top: 7%;
+	left: 41%;
+}
+
+.popupInner{
+	position:relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 100%;
+	max-width: 350px;
+	box-shadow: 0px 0px 15px 0px  rgb(161, 161, 161);
+	background-color: rgba(158, 1, 53, 0.712);
+	border-radius: 10px 10px 10px 10px;
+}
+
+.popupInner .closeBtn{
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	cursor: pointer;
+	border-radius: 30px 30px 30px 30px;
+}
+
+.popupInner .yesBtn{
+	position: absolute;
+	bottom: 5px;
+	left: 135px;
+	cursor: pointer;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.popupInner .noBtn{
+	position: absolute;
+	bottom: 5px;
+	right: 125px;
+	cursor: pointer;
+	border-radius: 10px 10px 10px 10px;
+}
+
+
+/* LOGIN */
+
+.loginBox {
+	margin: 30px;
+}
+
+#loginBox {
+	border-radius: 30px 30px 30px 30px;
+	width: 500px;
+	height: 50px;
+	text-align: center;
+}
+
+input[id="loginBox"] {
+	font-size: 20px;
+}
+
+.log{
+	margin-top: 30px;
+}
+
+/* LISTVIEW */
+
+.drinkList{
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+#drinkList{
+	font-size: 25px;
+	margin-left: 30px;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;	
+}
+
+.noDrink{
+	float: right;
+	cursor: pointer;
+	margin-top: 15px;
+	width: 27px;
+	height: 27px;
+}
+
+.float-container{
+	border: 3px solid #fff;
+    padding: 20px;
+}
+
+.textShadow{
+	text-shadow: 
+	0 0 2px rgb(28, 163, 95),
+	0 0 6px rgb(28, 163, 95);
+}
+
+.left{
+	width: 46%;
+	padding: 20px;
+	border-style: solid;
+	border-radius: 30px 30px 30px 30px;
+	margin-top: 50px;
+	background-color: white;
+	float: left;
+	margin: 20px;
+	box-shadow: 0px 0px 15px 5px  rgb(28, 87, 163);
+	margin-top: 60px;
+}
+
+.right{
+	float: left;
+	width: 46%;
+	padding: 20px;
+	border-style: solid;
+	border-radius: 30px 30px 30px 30px;
+	margin-top: 50px;
+	background-color: white; 
+	margin: 20px;
+	margin-top: 60px;
+	box-shadow: 0px 0px 15px 5px  rgb(158, 1, 54);
+}
+
+.head{
+	text-align: center;
+	font-size: 50px;
+	font-family: "Vibur";
+	text-decoration: underline;
+	text-decoration-thickness: 4px;
+}
+
+.ingredients {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+/* SIGN UP */
+
+.button {
+	border-radius: 10px 10px 10px 10px;
+	width: 110px;
+	height: 50px;
+	font-family: "Vibur";
+	font-size: 25px;
+	cursor: pointer;
+}
+
+/* HOW TO */
+
+.sign {
+	width: 600px;
+	margin: auto;
+}
+
+.headerHowTo {
+	text-align: center;
+	font-size: 50px;
+	font-family: "Vibur";
+	margin-top: 70px;
+}
+
+.howToText {
+	text-align: justify;
+	padding-bottom: 18px;
+	line-height: 2.3;
+	font-family: helvetica;
+	font-size: 16px;
+}
+
+
+.c {
+	font-size: 18px;
+	color:rgb(199, 26, 185);
+}
+
+.cbi{
+	color:rgb(199, 26, 185);
+	font-weight: bold;
+	font-style: italic;
+	font-size: 18px;
+}
+
+/* RESULT VIEW */
+
+.searchResults{
+	display: inline-block;
+	width: 25%;
+	padding: 0.6%;
+	border: 2.5px solid;
+	border-radius: 10px 10px 10px 10px;
+	margin: 2.6%;
+	background-color: white;
+	overflow: auto; 
+}
+
+#pic{
+	width: 100%;
+	height: 100%;
+	border: 2px solid;
+}
+
+.drinkName{
+	font-family: "Vibur";
+	font-size: 35px;
+	color: black;
+}
+
+
+/* CUSTOM DRINK*/
+
+.cc {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+label{
+	border: 1.5px solid;
+	border-color: black;
+	padding: 0.5rem;
+	font-family: sans-serif;
+	font-size: 15px;
+	border-radius: 10px 10px 10px 10px;;
+	cursor: pointer;	
+}
+
+.contain {
+	display: flex;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+.marginLeft {
+	margin-left: 30px;
+}
+
+.paddingCustom {
+	padding-bottom: 10px;
+}
+
+.paddingSide {
+	padding-right: 15px;
+}
+
+.flexx{
+	margin-top: 50px;
+}
+
+.headingCustom{
+	font-family: "Vibur";
+	font-size: 40px;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+
+.drinkImgCrop {
+	float: left;
+	padding: 5px;
+	height: 480px;
+	width: 480px;
+	object-fit: cover;
+	border-style: solid;
+	border-radius: 10px 10px 10px 10px;
+	margin: 10px;
+	background-image: linear-gradient(to bottom right, rgba(158, 1, 53, 0.637), rgba(28, 86, 163, 0.651));
+	max-height: 450px;
+}
+
+.textarea {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	resize: both;
+	min-height: 100px;
+	min-width: 400px;
+	line-height: 20px;
+	
+  }
+
+.input,
+.textarea {
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1px 6px;
+  max-width: 600px;
+  max-height: 200px;
+}
+
+.save {
+	border-radius: 10px 10px 10px 10px;
+	border-color: black;
+	border-width: 1.5px;
+	width: 120px;
+	height: 35px;
+	font-family: sans-serif;
+	font-size: 15px;
+	cursor: pointer;
+	background-color: white;
+
+}
+
+#custom{
+	border: 1px;
+	border-style: solid;
+	height: 33px;
+	text-align: center;
+	width: 65%;
+	border-radius: 10px 10px 10px 10px;
+	font-size: 15px;
+}
+
+#tagBtn{
+	border: 1px;
+	border-style: solid;
+	height: 29px;
+	border-radius: 3px 3px 3px 3px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+#removeBtn{
+	cursor: pointer;
+	border-radius: 5px 5px 5px 5px;
+	margin-left: 4px;
+	margin-bottom: 4px;
+}
+
+#customIngred{
+	border: 1px;
+	border-style: solid;
+	height: 30px;
+	text-align: center;
+	width: 30%;
+	border-radius: 10px 10px 10px 10px;
+	font-size: 15px;
+	margin-right: 10px;
+}
+
+
+/* LOADING GIF */
+
+.centerPicture {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -150px;
+}
+
+
+.noMatch {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: 0px;
+	margin-left: -120px;
+	text-align: center;
+	font-size: 40px;
+	font-family: "Vibur";
+	
+}
+
+/* USER INGREDIENTS */
+
+.noIngred{
+	float: right;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	float: right;
+	cursor: pointer;
+}
+
+.ingredBtn{
+	cursor: pointer;
+	border-radius: 0 30px 30px 0;
+	border-left: 1px solid white;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background-color: #fff;
+	color: #000;
+	height: 32px;
+}
+
+.myIngred{
+	max-height: 500px;
+	min-height: 350px;
+	border-style: solid;
+	width: 50%;
+	margin-left: 25%;
+	border-radius: 30px 30px 30px 30px;
+	margin-top: 20px;
+	box-shadow: 0px 0px 15px 5px  rgb(102, 28, 163);
+	overflow: auto;
+}
+
+.ml{
+	margin-left: 25%;
+}
+
+.hidden{
+    display: none;
+}
